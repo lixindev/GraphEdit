@@ -1,0 +1,46 @@
+.itempannel{
+    border-right:1px solid #c0c4cc;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.detailpannel{
+    border-left:1px solid #c0c4cc;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.node{
+    float: left;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unselect {
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -khtml-user-select: none;  
+    -ms-user-select: none;    
+
+    /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+    -o-user-select: none;
+    user-select: none;  
+}
+
+.toolbar {
+    padding: 6px 0;
+    background: #eee;
+    background-color: #C0C0C0;
+}
+
+.toolbar i{
+    cursor: pointer;
+    margin-left: 10px;
+}

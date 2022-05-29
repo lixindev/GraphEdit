@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Test Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div style="width:99%">
+            <div id="toolbar" class="toolbar">
+                <i data-command="undo" class="fa fa-mail-reply" title="撤销"></i>
+                <i data-command="redo" class="fa fa-mail-forward" title="重做"></i>
+                <i data-command="delete" class="fa fa-trash-o" title="删除"></i>
+                <i data-command="save" class="fa fa-save" title="保存"></i>
+                <i data-command="alignLeft" class="fa fa-align-left" title="左对齐"></i>
+                <i data-command="alignCenter" class="fa fa-align-center" title="居中"></i>
+                <i data-command="alignRight" class="fa fa-align-right" title="右对齐"></i>
+                <i data-command="baselineTop" class="fa fa-angle-double-up" title="顶端对齐"></i>
+                <i data-command="baselineMiddle" class="fa fa-bars" title="中间对齐"></i>
+                <i data-command="baselineBottom" class="fa fa-angle-double-down" title="底部对齐"></i>
+            </div>
+            <div class="row" style="width:99%">
+                <div class="col-md-2">
+                    <div id="itempannel" class="itempannel">
+                        <div class="node" data-type="node" data-shape="capsule" data-size="80*40" data-label="开始" data-color="rgba(200,255,200,1)" data-edgecolor="rgb(10,255,10,1)" >
+                            <img draggable="false" src="assets/img/start.svg" alt="" scrset="">
+                        </div>
+                        <div class="node" data-type="node" data-shape="rect" data-size="100*50" data-label="常规节点" data-color="#E6F7FF" data-edgecolor="#1890FF" >
+                            <img draggable="false" src="assets/img/normal.svg" alt="" scrset="">
+                        </div>
+                        <div class="node" data-type="node" data-shape="rhomb" data-size="100*80" data-label="判断" data-color="#E6FFFB" data-edgecolor="#5CDBD3" >
+                            <img draggable="false" src="assets/img/judge.svg" alt="" scrset="">
+                        </div>
+                        <div class="node" data-type="node" data-shape="capsule" data-size="80*40" data-label="结束" data-color="rgba(255,200,200,1)" data-edgecolor="rgb(255,50,50,1)" >
+                            <img draggable="false" src="assets/img/end.svg" alt="" scrset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div id="canvas"></div>
+                </div>
+                <div class="col-md-3">
+                    <div id="detailpannel" class="detailpannel">
+                        <div><b>属性详情</b></div>
+                        <div id="nodedetail" style="display:none">
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    节点名称
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="nodename" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    字体大小
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="fontsize_node" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    自定义属性
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="nodecustom" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="linedetail" style="display:none">
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    线条名称
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="linename" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    字体大小
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="fontsize_line" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    线型
+                                </label>
+                                <div class="col-sm-8">
+                                    <select id="linemodel" type="text" class="form-control">
+                                        <option value="polyline">折线</option>
+                                        <option value="straightline">直线</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">
+                                    自定义属性
+                                </label>
+                                <div class="col-sm-8">
+                                    <input id="linecustom" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
