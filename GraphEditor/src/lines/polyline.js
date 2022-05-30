@@ -540,11 +540,23 @@ function connectToEnd(curDirection, curPoint, endPoint, inflexionPoint) {
     let point = {};
     if (curDirection === 'x' && curPoint.y !== endPoint.y) {
         [point.x, point.y] = [endPoint.x, curPoint.y];
-        inflexionPoint.push(point);
+        if (inflexionPoint.length > 0 && inflexionPoint[inflexionPoint.length - 1].x === point.x 
+        && inflexionPoint[inflexionPoint.length - 1].y === point.y) {
+            inflexionPoint.pop();
+        }
+        else{
+            inflexionPoint.push(point);
+        }
         curDirection = curDirection === 'y' ? 'x' : 'y';
     } else if (curDirection === 'y' && curPoint.x !== endPoint.x) {
         [point.x, point.y] = [curPoint.x, endPoint.y];
-        inflexionPoint.push(point);
+        if (inflexionPoint.length > 0 && inflexionPoint[inflexionPoint.length - 1].x === point.x 
+        && inflexionPoint[inflexionPoint.length - 1].y === point.y) {
+            inflexionPoint.pop();
+        }
+        else{
+            inflexionPoint.push(point);
+        }
         curDirection = curDirection === 'y' ? 'x' : 'y';
     }
 

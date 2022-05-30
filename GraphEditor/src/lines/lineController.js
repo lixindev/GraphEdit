@@ -37,14 +37,10 @@ export class LineController{
             for (let index = 0; index < this.line.inflexionPoint.length - 1; index++) {
                 const p1 = this.line.inflexionPoint[index];
                 const p2 = this.line.inflexionPoint[index + 1];
-                let p3 = {};
-                if (p1.x === p2.x){
-                    p3.x = p1.x;
-                    p3.y = (p1.y + p2.y)/2;
-                } else if (p1.y === p2.y){
-                    p3.y = p1.y;
-                    p3.x = (p1.x + p2.x)/2;
-                }
+                const p3 = {
+                    x: (p1.x + p2.x)/2,
+                    y: (p1.y + p2.y)/2
+                };
                 if (p3.x && p3.y){
                     this.ctx.fillRect(p3.x - 2.5, p3.y - 2.5, 5, 5);
                     this.ctx.strokeRect(p3.x - 2.5, p3.y - 2.5, 5, 5);
